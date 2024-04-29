@@ -264,7 +264,7 @@ function Game(begin) {
                             </a>
                             <h4>Level {numSeedWords - 1}</h4>
                         </div>  
-                        <div className = "title">
+                        <div>
                             <h1>Oddonym</h1>
                         </div>
                         <div className='HeaderMenus'>

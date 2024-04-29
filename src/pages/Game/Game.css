@@ -60,11 +60,12 @@
     transform: translate(-50%, -50%);
     text-align: center;
 
-    color: #9593FF;
-    font-family: sans-serif;
+    color: #1E57BE;
+    font-family: 'Courier New', Courier, monospace;
     font-size: xxx-large;
-    font-weight: bolder;
+    font-weight: 700px;
     margin: 0;
+    font-style: normal;
     
 }
 
