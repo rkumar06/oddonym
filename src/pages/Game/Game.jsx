@@ -264,8 +264,8 @@ function Game(begin) {
                             </a>
                             <h4>Level {numSeedWords - 1}</h4>
                         </div>  
-                        <div className = "oddle-title">
-                            <h1>Oddle</h1>
+                        <div className = "title">
+                            <h1>Oddonym</h1>
                         </div>
                         <div className='HeaderMenus'>
                             {/* <QuestionMark color="#6B6B6B" width="36" height="36" />

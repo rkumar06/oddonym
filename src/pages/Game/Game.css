@@ -12,7 +12,11 @@
 .title{
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 60px;
+    font-family: "Courier Prime", monospace;
+    font-weight: 700px;
+    font-style: bold;
+    color: #1E57BE;
 }
 
 .final-level{
@@ -76,11 +80,6 @@
     height: 3.5rem;
     width: 3.5rem;
 }
-
-.oddle-title{
-    font-family: "Special Elite", system-ui;
-}
-
 
 .card-container {
     display: grid;
