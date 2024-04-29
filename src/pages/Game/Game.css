@@ -1,0 +1,178 @@
+.right-wrong{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.next-level-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom:10px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.final-level{
+    display: flex;
+    justify-content: center;
+}
+
+.instructions{
+    display:flex;
+    justify-content: center;
+}
+
+.Game {
+    text-align: center;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.GameFrontEndDiv {
+    margin: 0 rem;
+    height: 100vh;
+}
+.HeaderDiv {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.HeaderTitleMenu {
+    display: flex;
+    width: 100%;
+}
+.HeaderTitle {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 3rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    color: #9593FF;
+    font-family: sans-serif;
+    font-size: xxx-large;
+    font-weight: bolder;
+    margin: 0;
+    
+}
+
+.HeaderMenus {
+    display: flex;
+    position: absolute;
+    left: 16rem;
+    top: 0.5rem;
+}
+
+.HeaderMenus * {
+    padding-left: 1rem;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.oddle-title{
+    font-family: "Special Elite", system-ui;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adjust the gap size as needed */
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+.card-container-reveal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust the gap size as needed */
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+.HeaderMenuLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+
+    position: absolute;
+    right: 16rem;
+    top: 0.25rem;
+    width: 100%;
+}
+
+.HeaderMenuLeft * {
+    margin: 0;
+    width: fit-content;
+}
+
+.ResultDiv {
+    height: 100%;
+    margin-bottom: 4rem;
+}
+
+.LeaderboardLink {
+    text-decoration: underline;
+}
+.LeaderboardLink:hover {
+    cursor: pointer;
+}
+
+/* Tablet Sizes */
+@media screen and (max-width: 900px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px; /* Adjust the gap size as needed */
+        padding: 10px; /* Adjust the padding as needed */
+    }
+    
+    .card-container-reveal {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px; /* Adjust the gap size as needed */
+        padding: 10px; /* Adjust the padding as needed */
+    }
+    .HeaderDiv {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+    .HeaderMenuLeft {
+        position: absolute;
+        left: -16rem;
+        top: -1rem;
+    }
+}
+
+/* Mobile Sizes */
+@media screen and (max-width: 600px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px; /* Adjust the gap size as needed */
+        padding: 5px; /* Adjust the padding as needed */
+    }
+    
+    .card-container-reveal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px; /* Adjust the gap size as needed */
+        padding: 5px; /* Adjust the padding as needed */
+    }
+    .HeaderMenuLeft {
+        position: absolute;
+        left: -9.5rem;
+        top: -1rem;
+    }
+    .HeaderDiv {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+}

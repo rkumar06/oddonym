@@ -1,0 +1,113 @@
+.LandingPageDiv {
+    display: flex;
+    height: 100vh;
+    justify-content: center;  
+    flex-direction: column;  
+    align-items: center;
+}
+
+.OddleTitle {
+    color: #9593FF;
+    font-family: "Margarine", sans-serif;
+}
+
+.wavy {
+    /* margin: 1000;
+    padding: 1000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* -webkit-box-reflect: below 12px linear-gradient(
+        transparent, rgba(0,0,0,0.2)
+    ); */
+}
+
+.wavy span {
+    font-family: "Special Elite", system-ui;
+    position: relative;
+    display: inline-block;
+    color: #9593FF;
+    font-size: 4em;
+    /* text-transform: uppercase; */
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+    font-weight: bold;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    20%
+    {
+        transform: translateY(-20px);
+    }
+    40%,100%
+    {
+        transform: translateY(0px);
+    }
+}
+
+/* changing the cursor to smiley */
+/* .button-emoji {
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+} */
+
+* {
+    /* cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto; */
+}
+
+.description {
+    display: inline-block; 
+}
+.desc {
+    /* justify-content: center; */
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    font-family: "Special Elite", system-ui;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(39);
+        cursor: .9s step-end infinite alternate;
+    text-align: center;
+}
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    from {width: 0}
+}
+
+h4 {
+    font-family: "Special Elite", system-ui;
+    padding: 1px;
+}
+
+/* Tablet Sizes */
+@media screen and (max-width: 900px) {
+
+}
+
+/* Mobile Sizes */
+@media screen and (max-width: 600px) {
+    .desc {
+        /* justify-content: center; */
+        font-size: 1.5em;
+        letter-spacing: 5px;
+        font-family: "Special Elite", system-ui;
+        border-right: 0;
+        width: 100%;
+        text-wrap: wrap; 
+        overflow: hidden;
+        animation: none;
+        text-align: center;
+    }
+}
