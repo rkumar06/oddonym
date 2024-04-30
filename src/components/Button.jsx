@@ -15,10 +15,11 @@ function Button({
   const StyledButton = styled('button', {
     display: "flex",
     justifyContent: "center",
-    fontFamily: "sans-serif",
+    fontFamily: "Harmattan",
+    fontSize: "23px",
     border: "none",
 
-    color: "white",    
+    color:'#343b5d',   
 
     variants: {
       color: {
