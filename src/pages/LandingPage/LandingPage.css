@@ -65,3 +65,16 @@
     font-weight: 100;
     margin-top: 1%;
 }
+
+@keyframes changeColor {
+    0% {
+        fill: #b9c8e4; /* Start color */
+      }
+    100% {
+        fill: #1e57be; /* End color */
+    }
+}
+
+#color-fade {
+    animation: changeColor 3s;
+}
