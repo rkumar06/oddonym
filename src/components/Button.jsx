@@ -2,6 +2,7 @@ import React from 'react'
 import { styled } from './../stitches.config';
 import {Link } from "react-router-dom";
 import Placeholder from 'react-bootstrap/Placeholder';
+import './Button.css'
 
 function Button({
     onClick,
@@ -17,24 +18,32 @@ function Button({
     justifyContent: "center",
     fontFamily: "Harmattan",
     fontSize: "23px",
-    border: "none",
+    fontWeight: "100",
+    border: "3px solid #1e57be",
+    borderRadius: "20px",
 
-    color:'#343b5d',   
+    color:'#f7f8fd',   
 
     variants: {
       color: {
         selected: {
-          backgroundColor: '#9593FF',
+          fontSize: '23px',
+          backgroundColor: '#1e57be',
           color: 'white',
+          fontWeight: "100",
           '&:hover': {
             backgroundColor: 'darkviolet',
           },
         },
         normal: {
-          backgroundColor: '#ECECEC',
-          color: 'black',
+          fontSize: '23px',
+          borderRadius: "20px",
+          backgroundColor: '#1e57be',
+          color: '#f7f8fd',
           '&:hover': {
-            backgroundColor: 'lightgray',
+            backgroundColor: '#f7f8fd',
+            color: '#1e57be',
+            fontWeight: "100"
           },
         },
       },
@@ -43,15 +52,15 @@ function Button({
           py: "$xxxl",
           minWidth: "16rem",
           borderRadius: "$rounded_lg",
-          fontSize: "$lg",
-          fontWeight: "$bold",
+          fontSize: "23px",
+          fontWeight: "100",
         },
         normal: {
           py: "$lg",
           minWidth: "8rem",
-          borderRadius: "$rounded_md",
-          fontSize: "$sm",
-          fontWeight: "normal",
+          borderRadius: "20px",
+          fontSize: "23px",
+          fontWeight: "100",
         },
       },
     },

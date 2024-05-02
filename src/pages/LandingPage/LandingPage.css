@@ -1,138 +1,67 @@
 /* new code for oddonym */
+* {
+    background-color: #f7f8fd;
+    color: #343b5d;
+}
+
+.oddonym-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    transform: translate(0%, 70%);
+}
+
 .oddonym-title {
     font-family: 'TlwgTypewriter Bold', monospace;
     color: #1e57be;
     font-size: 68px;
 }
 
+.rules-wrapper {
+    display: inline-block;
+}
+
 .oddonym-rules {
     font-family: 'Space Mono';
-    font-size: 25px;
-    color: #343b5d;
+    font-size: 27px;
+    width: 100%;
+    overflow: hidden;
+    border-right: .15em solid #343b5d;
+    white-space: nowrap;
+    margin-right: .15em;
+    animation: typing 3s steps(40, end), blink-caret step-end;
 }
 
-.font {
-    font-family: 'Harmattan';
-    font-size: 23px;
-}
-
-* {
-    background-color: #f7f8fd;
-    color: #343b5d;
-}
-
-
-/* old code from oddle */
-.LandingPageDiv {
-    display: flex;
-    height: 100vh;
-    justify-content: center;  
-    flex-direction: column;  
-    align-items: center;
-}
-
-.OddleTitle {
-    color: #9593FF;
-    /* font-family: "Margarine", sans-serif; */
-}
-
-.wavy {
-    /* margin: 1000;
-    padding: 1000; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    /* -webkit-box-reflect: below 12px linear-gradient(
-        transparent, rgba(0,0,0,0.2)
-    ); */
-}
-
-.wavy span {
-    /* font-family: "Special Elite", system-ui; */
-    position: relative;
-    display: inline-block;
-    color: #9593FF;
-    font-size: 4em;
-    /* text-transform: uppercase; */
-    animation: animate 1s ease-in-out infinite;
-    animation-delay: calc(0.1s * var(--i));
-    font-weight: bold;
-}
-
-@keyframes animate
-{
-    0%
-    {
-        transform: translateY(0px);
-    }
-    20%
-    {
-        transform: translateY(-20px);
-    }
-    40%,100%
-    {
-        transform: translateY(0px);
-    }
-}
-
-/* changing the cursor to smiley */
-/* .button-emoji {
-    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+/* typing animation */
+/* .oddonym-rules::before {
+    content: '';
+    
 } */
 
-* {
-    /* cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto; */
-}
-
-.description {
-    display: inline-block; 
-}
-.desc {
-    /* justify-content: center; */
-    font-size: 1.5em;
-    letter-spacing: 5px;
-    /* font-family: "Space Mono", system-ui; */
-    border-right: 5px solid;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    animation:
-        typing 2s steps(39);
-        cursor: .9s step-end infinite alternate;
-    text-align: center;
-}
-
-@keyframes cursor {
-    50% {border-color: transparent;}
-}
-
 @keyframes typing {
-    from {width: 0}
-}
-
-h4 {
-    /* font-family: "Special Elite", system-ui; */
-    padding: 1px;
-}
-
-/* Tablet Sizes */
-@media screen and (max-width: 900px) {
-
-}
-
-/* Mobile Sizes */
-@media screen and (max-width: 600px) {
-    .desc {
-        /* justify-content: center; */
-        font-size: 1.5em;
-        letter-spacing: 5px;
-        /* font-family: "Special Elite", system-ui; */
-        border-right: 0;
-        width: 100%;
-        text-wrap: wrap; 
-        overflow: hidden;
-        animation: none;
-        text-align: center;
+    from {
+        width: 0;
     }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-carat {
+    /* from,  */
+    50% {
+        border-color: transparent;
+    }
+    /* 50% {
+        border-color: #343b5d;
+    } */
+}
+
+.bio {
+    font-family: 'Harmattan';
+    font-size: 23px;
+    font-weight: 100;
+    margin-top: 1%;
 }
