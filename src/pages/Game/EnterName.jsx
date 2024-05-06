@@ -22,7 +22,7 @@ function EnterName(props){
             method: 'post',
             maxBodyLength: Infinity,
             // rememeber to fill in query parameters
-            url: `https://oddle-c2f53883d1bd.herokuapp.com/updatedaily?username=${inputValue}&date=${chopped_date}&rounds_played=${rounds}`,
+            url: `https://oddonym-100a6c84d76f.herokuapp.com/updatedaily?username=${inputValue}&date=${chopped_date}&rounds_played=${rounds}`,
             headers: { }
             };
             

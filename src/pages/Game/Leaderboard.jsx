@@ -43,7 +43,7 @@ function Leaderboard({ close }) {
             method: 'get',
             maxBodyLength: Infinity,
             // remember to fill in query parameters
-            url: `https://oddle-c2f53883d1bd.herokuapp.com/topten?date=${chopped_date}`,
+            url: `https://oddonym-100a6c84d76f.herokuapp.com/topten?date=${chopped_date}`,
             headers: { }
           };
           
