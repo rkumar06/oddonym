@@ -19,7 +19,7 @@ function ListEntry({
         minWidth: "16rem",
         borderRadius: "$rounded",
 
-        fontFamily: "sans-serif",
+        fontFamily: "Harmattan",
         fontSize: "$lg",
         fontWeight: "$bold",
         // color: "white",

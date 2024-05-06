@@ -64,7 +64,7 @@ function LandingPage() {
           </g>
         </g>
       </svg>
-      <h1 className='oddonym-title'>Oddle</h1>
+      <h1 className='oddonym-title'>Oddonym</h1>
       <div className='rules-wrapper'>
         <p className='oddonym-rules'>Given X words, select the odd word out.</p>
       </div>

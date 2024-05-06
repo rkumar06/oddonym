@@ -262,10 +262,10 @@ function Game(begin) {
                             <a onClick={() => setOpenLeaderboard(true)}>
                                 <h4 className="LeaderboardLink">Leaderboard</h4>
                             </a>
-                            <h4>Level {numSeedWords - 1}</h4>
+                            <h4 className = "level">Level {numSeedWords - 1}</h4>
                         </div>  
                         <div>
-                            <h1>Oddonym</h1>
+                            <h1 className ="oddonym-title">Oddonym</h1>
                         </div>
                         <div className='HeaderMenus'>
                             {/* <QuestionMark color="#6B6B6B" width="36" height="36" />

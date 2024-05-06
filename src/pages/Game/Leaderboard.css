@@ -33,12 +33,14 @@
     height: 100%;
     overflow-y: auto;
     margin: 0;
+    font-family: "Harmattan";
     /* background-color: yellow; */
 }
 
 .Leaderboard-title {
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'TlwgTypewriter Bold',Courier, monospace;
     background-color: white;
+    font-size: 30px;
 }
 
 .Headers {

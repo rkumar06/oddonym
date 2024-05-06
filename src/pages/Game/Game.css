@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     font-size: 60px;
-    font-family: "Courier Prime", monospace;
+    font-family: "Harmattan", monospace;
     font-weight: 700px;
     font-style: bold;
     color: #1E57BE;
@@ -69,6 +69,12 @@
     
 }
 
+.oddonym-title{
+    font-family: 'TlwgTypewriter Bold', monospace;
+    color: #1e57be;
+    font-size: 50px;
+}
+
 .HeaderMenus {
     display: flex;
     position: absolute;
@@ -120,9 +126,14 @@
 
 .LeaderboardLink {
     text-decoration: underline;
+    font-family: "Harmattan";
 }
 .LeaderboardLink:hover {
     cursor: pointer;
+    color:#1E57BE;
+}
+.level{
+    font-family: "Harmattan";
 }
 
 /* Tablet Sizes */
