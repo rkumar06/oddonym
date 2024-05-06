@@ -83,7 +83,7 @@
 }
 
 .oddonym-title{
-    font-family: 'TlwgTypewriter Bold';
+    font-family: 'TlwgTypewriter Bold',Courier, monospace;
     color: #1e57be;
     font-size: 50px;
 }
