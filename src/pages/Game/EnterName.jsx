@@ -42,14 +42,14 @@ function EnterName(props){
         <div className = "popup-overlay-name" onClick={() => {props.closeName()}}>
             <div className="popup-content-name" onClick={e => {e.stopPropagation()}}>
                 <h4 className="closeButtonName" onClick={props.closeName}>x</h4>
+                <p className="popup-text">Join Leaderboard</p>
                 <input
                     type="text"
                     value={inputValue}
                     onChange={handleInputChange}
                     placeholder="Name here"
                 />
-                <p>You typed: {inputValue}</p>
-                <button onClick = {sendUsername}>Submit</button>
+                <button className="done-button" onClick = {sendUsername}>Done</button>
             </div>
         </div>
     )

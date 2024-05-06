@@ -5,6 +5,14 @@ import oddonymLogo from './../../../public/oddonym.svg'
 import Button from '../../components/Button'
 
 function LandingPage() {
+  const [nameFirst, setNameFirst] = React.useState()
+
+  React.useEffect(() => {
+    const randomValue = Math.random() < 0.5 ? 0 : 1;
+    setNameFirst(randomValue);
+  }, []);
+
+
   return (
     <div className='oddonym-container'>
       {/* <img src={oddonymLogo} className='oddonym-logo' alt="React logo"/> */}
@@ -61,7 +69,7 @@ function LandingPage() {
         <p className='oddonym-rules'>Given X words, select the odd word out.</p>
       </div>
       <Button textInButton="Play Now" color="normal" size="normal" linkTo="/Game" />
-      <h4 className="bio">By Riya Kumar and Alicia Shanahan</h4>
+      {nameFirst === 0 ? <h4 className="bio">By Riya Kumar and Alicia Shanahan</h4> : <h4 className="bio">By Alicia Shanahan and Riya Kumar</h4>}
     </div>
   )
 }
