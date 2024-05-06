@@ -15,12 +15,12 @@ function ListEntry({
     
     const StyledList = styled('li', {
         display: "flex",
-        py: "$xl",
+        py: "$lg",
         minWidth: "16rem",
         borderRadius: "$rounded",
 
         fontFamily: "Harmattan",
-        fontSize: "$lg",
+        fontSize: "$xl",
         fontWeight: "$bold",
         // color: "white",
         border: "none",

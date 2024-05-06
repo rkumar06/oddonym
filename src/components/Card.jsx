@@ -34,7 +34,7 @@ function Card({
         borderRadius: "$rounded_lg",
 
         fontFamily: "Harmattan",
-        fontSize: "$xl",
+        fontSize: "30px",
         fontWeight: "$bold",
         color: "white",
         border: "none",
