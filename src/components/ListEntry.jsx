@@ -25,7 +25,7 @@ function ListEntry({
         // color: "white",
         border: "none",
         marginTop:"0.5rem",
-        filter: "drop-shadow(0 4px 4px grey)",
+        // filter: "drop-shadow(0 4px 4px grey)",
 
         variants: {
             type: {
