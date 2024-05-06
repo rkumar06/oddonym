@@ -22,7 +22,7 @@ function ListEntry({
         fontFamily: "sans-serif",
         fontSize: "$lg",
         fontWeight: "$bold",
-        color: "white",
+        // color: "white",
         border: "none",
         marginTop:"0.5rem",
         filter: "drop-shadow(0 4px 4px grey)",
@@ -30,10 +30,10 @@ function ListEntry({
         variants: {
             type: {
                 normal: {
-                    backgroundColor: 'white',
+                    // backgroundColor: 'white',
                     color: 'black',
                     '&:hover': {
-                        backgroundColor: 'lightgray',
+                        // backgroundColor: 'lightgray',
                     },
                 },
             },
@@ -68,8 +68,7 @@ function ListEntry({
                     width: "75%",
                     display: "inline-block",
                     minHeight: "1em",
-                    opacity: "1",
-                    backgroundColor: "#DDD8D8"}} animation="glow" size="lg" />}
+                    opacity: "1",}} animation="glow" size="lg" />}
         </StyledList>
     )
 }
