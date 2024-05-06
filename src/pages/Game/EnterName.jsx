@@ -43,7 +43,7 @@ function EnterName(props){
             <div className="popup-content-name" onClick={e => {e.stopPropagation()}}>
                 <h4 className="closeButtonName" onClick={props.closeName}>x</h4>
                 <p className="popup-text">Join Leaderboard</p>
-                <input
+                <input className = "text-input"
                     type="text"
                     value={inputValue}
                     onChange={handleInputChange}

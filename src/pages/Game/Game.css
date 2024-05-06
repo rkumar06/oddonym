@@ -2,11 +2,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: "Harmattan";
+}
+
+.final-level{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Harmattan";
+
 }
 .next-level-button{
     display: flex;
     justify-content: center;
     margin-bottom:10px;
+}
+
+.TaskDescription{
+    font-family: "Harmattan", monospace;;
 }
 
 .title{

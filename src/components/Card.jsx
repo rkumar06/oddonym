@@ -33,8 +33,8 @@ function Card({
         // minWidth: "16rem",
         borderRadius: "$rounded_lg",
 
-        fontFamily: "sans-serif",
-        fontSize: "$lg",
+        fontFamily: "Harmattan",
+        fontSize: "$xl",
         fontWeight: "$bold",
         color: "white",
         border: "none",
@@ -42,10 +42,14 @@ function Card({
         variants: {
             type: {
                 selected: {
-                    backgroundColor: '#9593FF',
+                    backgroundColor: '#1E57BE',
                     color: 'white',
                     '&:hover': {
-                        backgroundColor: 'darkviolet',
+                        backgroundColor: 'white',
+                        outlineStyle: 'solid',  
+                        outlineWidth: '2px',
+                        outlineColor:'#1E57BE',
+                        color: '#1E57BE'
                     },
                 },
                 normal: {
@@ -69,7 +73,7 @@ function Card({
                     backgroundColor: '#ECECEC',
                     outlineStyle: 'solid',  
                     outlineWidth: '2px',
-                    outlineColor: '#9593FF',
+                    outlineColor: '#1E57BE',
                     color: 'black',
                     '&:hover': {
                         backgroundColor: 'lightgray',

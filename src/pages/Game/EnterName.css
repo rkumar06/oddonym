@@ -19,6 +19,12 @@
     z-index: 1000;
 }
 
+.text-input{
+    border-style: none;
+    font-family: "Harmattan";
+    
+}
+
 .closeButtonName {
     width: fit-content;
     position: absolute;
@@ -33,7 +39,7 @@
 
 .popup-text{
     background: white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'TlwgTypewriter Bold', Courier, monospace;
     font-style: bold;
 }
 
@@ -45,11 +51,12 @@
     border-width: 3px;
     border-radius: 4px;
     border: 3px solid #1E57BE; 
+    font-family: "Harmattan";
 }
 
 .done-button:hover{
     justify-content: center;
-    margin-bottom:10px;
+    /* margin-bottom:10px; */
     background-color: white;
     border-color : #1E57BE;
     color: #1E57BE;
