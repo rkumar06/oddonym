@@ -23,6 +23,8 @@ function Game(begin) {
     const [joinLeaderBoard, setJoinLeaderBoard] = useState(false)
     const [openLeaderboard, setOpenLeaderboard] = useState(false) // false = no Leaderboard popup, true = Leaderboard popup
     const [leaderBoardOnce, setLeaderBoardOnce] = useState(true) // only can join leader board once
+    const [timeLeft, setTimeLeft] = useState(1); // Initialize timer to 30 seconds
+    const [timeOver, setTimeOver] = useState(false);
 
     let cards = []
 
@@ -96,6 +98,22 @@ function Game(begin) {
     useEffect(() => {
         nextLevel()
     }, [])
+
+    useEffect(() => {
+        // Start the countdown automatically when the component mounts
+        const timer = setInterval(() => {
+          setTimeLeft((prevTime) => prevTime - 1);
+        }, 1000);
+    
+        // Stop the timer when it reaches 0
+        if (timeLeft <= 0) {
+          setTimeOver(true);
+          clearInterval(timer);
+        }
+    
+        // Cleanup the interval on component unmount
+        return () => clearInterval(timer);
+      }, [timeLeft]);
     
 
     function joinLeaderBoardFunc(){
@@ -121,14 +139,6 @@ function Game(begin) {
         return Math.floor(Math.random() * (n + 1));
     }
 
-    // function shuffleCards(){
-    //     let array = [...allWords]; // Make a copy of allWords to shuffle
-    //     for (let i = array.length - 1; i > 0; i--) {
-    //         const j = Math.floor(Math.random() * (i + 1));
-    //         [array[i], array[j]] = [array[j], array[i]]; // Swap elements
-    //     }
-    //     setAllWords(array); // Set the shuffled array back to state
-    // }
 
     function shuffleCards(words) {
         setSelected(-1)
@@ -157,6 +167,7 @@ function Game(begin) {
         setRightWrong(0)
         getAllWords()
         setRevealed(false)
+        setTimeLeft(oldTime => oldTime + 30)
         // shuffleCards()
         // setStarted(true)
     }
@@ -221,28 +232,6 @@ function Game(begin) {
         }
     }
 
-    // async function getAllWords() {
-    //     try {
-    //         const seeds = await fetchSeedWords();  // Fetch initial seed words
-    //         setAllWords([]);  // Clear allWords before populating
-
-    //         const oddleWord = await fetchSeedWord();
-    //         setOddle(oddleWord);
-    //         setAllWords([oddleWord])
-
-    //         for (let i = 0; i < seeds.length; i++) {
-    //             const seed = seeds[i];
-    //             const result = await fetchAlikeWords(seed);  // Fetch alike words for each seed
-    //             const alikeWords = result[0]
-    //             const newSeed = result[1]
-    //             setAllWords(prevWords => [...prevWords, newSeed, ...alikeWords]);  // Add both seed and its alike words
-    //         }
-    //     } catch (error) {
-    //         console.error('Failed to fetch words:', error);
-    //         setAllWords([]);
-    //     }
-    // }
-
     async function fetchSeedWords() {
         const seeds = [];
         for (let i = 0; i < numSeedWords; i++) {
@@ -277,7 +266,7 @@ function Game(begin) {
 
             <div className='Game'>
                 <h4 className='TaskDescription'>There {numSeedWords - 1 === 1 ? `is` : `are`} {numSeedWords - 1} {numSeedWords - 1 === 1 ? `group` : `groups`} of 3 words that relate to each other. Select the odd one out.</h4>
-                
+                {timeLeft > 10 ? <h5 className = 'TaskDescription'>{(rightWrong != 2 && !timeOver) && `${timeLeft} Seconds Left`}</h5> : <h5 className = 'tenSecondsLeft'>{(rightWrong != 2 && !timeOver) && `${timeLeft} Seconds Left`}</h5>}
                 {!revealed && <div className="card-container">
                     {cards}    
                 </div>}
@@ -287,30 +276,31 @@ function Game(begin) {
                 </div>}
 
                 
-                {loaded && (rightWrong === 0) && <Button onClick = {() => shuffleCards(allWords)} textInButton="Shuffle" color="normal" size="normal" />}
+                {loaded && (rightWrong === 0 && !timeOver) && <Button onClick = {() => shuffleCards(allWords)} textInButton="Shuffle" color="normal" size="normal" />}
 
                 <div className="ResultDiv" id="ResultDiv">
                     <div className = "right-wrong">
                         <h2>{rightWrong === 1 && "You got it right!"}</h2>
                         <h3>{rightWrong === 2 && "You got it wrong"}</h3>
+                        <h3>{timeOver && "Game Over: Time's Up!"}</h3>
                     </div>
                     <div className = "right-wrong">
-                        {rightWrong === 2 && <h3>
+                        {(rightWrong === 2 || timeOver) && <h3>
                             The oddle was: <span style={{textDecoration: 'underline #1E57BE', color: "black"}}>{oddle}</span>
                         </h3>
                         }
                     </div>
                     <div className = "final-level">
-                        <h3>{rightWrong === 2 && `Final Level: ${numSeedWords - 1}`}</h3> 
+                        <h3>{(rightWrong === 2 || timeOver) && `Final Level: ${numSeedWords - 1}`}</h3> 
                         </div>
                     <div className = "next-level-button">
                         {rightWrong === 1 && <Button onClick = {nextLevel} textInButton="Next Level" color="normal" size="normal" />}
                     </div>
                     <div className = "next-level-button">
-                        {(rightWrong === 2 && !revealed) && <Button onClick = {reveal} textInButton="Reveal Groups" color="normal" size="normal" />}
+                        {((rightWrong === 2 || timeOver) && !revealed) && <Button onClick = {reveal} textInButton="Reveal Groups" color="normal" size="normal" />}
                     </div>
                     <div className = "next-level-button">
-                        {(rightWrong === 2 && leaderBoardOnce) && <Button onClick = {joinLeaderBoardFunc} textInButton="Join Leaderboard" color="normal" size="normal" />}
+                        {((rightWrong === 2 || timeOver) && leaderBoardOnce) && <Button onClick = {joinLeaderBoardFunc} textInButton="Join Leaderboard" color="normal" size="normal" />}
                     </div>
 
                     {/* Popups */}

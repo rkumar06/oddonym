@@ -22,6 +22,11 @@
     font-family: "Harmattan", monospace;;
 }
 
+.tenSecondsLeft{
+    font-family: "Harmattan", monospace;;
+    color: #1E57BE;
+}
+
 .title{
     display: flex;
     justify-content: center;
